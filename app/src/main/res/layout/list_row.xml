@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@android:color/white">
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+ >
+
+        <com.juked.app.utils.smartimageview.SmartImageView
+            android:id="@+id/list_image"
+            android:layout_width="120dip"
+            android:layout_height="120dip"
+            android:src="@drawable/thumb" />
+    </LinearLayout>
+
+    <!-- Title Of Song -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginTop="5dp"
+        android:text="Rihanna Love the way lie"
+        android:textColor="@android:color/black"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:lines="1"
+        android:typeface="sans" />
+
+    <!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Just gona stand there and ..."
+
+        android:textColor="@android:color/black"
+        android:lines="1"
+        android:textSize="12dip" />
+
+    <TextView
+        android:id="@+id/album"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Just gona stand there and ..."
+
+        android:textColor="@android:color/black"
+        android:lines="1"
+        android:textSize="12dip"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/time"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Today 4:26 pm"
+        android:textSize="12dp"
+        android:id="@+id/txtDate"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginLeft="11dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView" />
+
+
+
+
+</RelativeLayout>

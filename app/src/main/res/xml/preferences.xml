@@ -1,0 +1,79 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="settingPreferences"
+    android:title="Preferences"
+    >
+
+    <PreferenceCategory
+        android:title="Recording preferences">
+
+        <ListPreference
+            android:key="match_rate"
+            android:title="Match Rate"
+            android:summary="Match rate"
+            android:entries="@array/MatchRateListDisplayValue"
+            android:entryValues="@array/MatchRateListReturnValue"
+            android:dialogTitle="Match rate"
+            android:defaultValue="ONE_PER_SECOND"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:title="On duration"
+            android:key="on_duration"
+            android:defaultValue="1"
+            android:inputType="number" />
+
+        <EditTextPreference
+            android:title="Off duration"
+            android:key="off_duration"
+            android:defaultValue="0"
+            android:inputType="number" />
+
+
+        <SwitchPreference
+            android:enabled="true"
+            android:defaultValue="true"
+            android:key="repeat"
+            android:title="Repeat"
+            android:persistent="true"/>
+
+        <PreferenceScreen
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:key="settingPreferences"
+            android:title="Upload Interval"
+            android:summary="Select the Upload Interval"
+            >
+
+
+            <ListPreference
+                android:key="upload_interval"
+                android:title="Interval"
+                android:summary=""
+                android:entries="@array/UploadIntervalListDisplayValue"
+                android:entryValues="@array/UploadIntervalListReturnValue"
+                android:dialogTitle="Upload Interval"
+                android:defaultValue="IMMEDIATELY"
+                android:persistent="true" >
+            </ListPreference>
+            <EditTextPreference
+                android:title="Hour Value"
+                android:key="editHourValue"
+                android:defaultValue="1"
+                android:inputType="number" />
+            <EditTextPreference
+                android:title="Minute Value"
+                android:key="editMinuteValue"
+                android:defaultValue="1"
+                android:inputType="number" />
+
+        </PreferenceScreen>
+
+        <EditTextPreference
+            android:title="Notification response"
+            android:key="notification_response"
+            android:defaultValue="0"
+            android:inputType="number" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

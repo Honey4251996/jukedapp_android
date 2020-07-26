@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.juked.app.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juked is Tagging songs Automatically. \n no need to press a button, Results will be displayed here shortly if music is playing."
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14dp"
+                android:lines="3"
+                android:id="@+id/txtStatic"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center" />
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:id="@+id/listView"
+                android:divider="#555555"
+                android:dividerHeight="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/bannerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.juked.app.utils.smartimageview.SmartImageView
+                android:layout_width="fill_parent"
+                android:layout_height="160dp"
+                android:id="@+id/banner"
+                android:src="@drawable/sunfm"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1"
+                android:textColor="#fd8547"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="58dp"
+                android:id="@+id/txtBallot"
+                android:layout_gravity="left|top" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/btnBanner"
+                android:background="@android:color/transparent"/>
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/imgtop" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/jukedlogo"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Listening..."
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/textView"
+        android:textStyle="italic"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+</RelativeLayout>

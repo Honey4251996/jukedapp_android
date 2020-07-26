@@ -1,0 +1,49 @@
+apply plugin: 'android-library'
+
+android {
+
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        applicationId 'audiosdk'
+        minSdkVersion 9
+        targetSdkVersion 19
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/jtransforms-2.4.jar')
+    compile files('libs/httpmime-4.3.3.jar')
+    compile files('libs/commons-cli-1.2.jar')
+    compile files('libs/httpcore-4.3.2.jar')
+    compile files('libs/httpcore-ab-4.3.2.jar')
+    compile files('libs/httpcore-nio-4.3.2.jar')
+}

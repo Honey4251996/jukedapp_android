@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.juked.app">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <permission android:name="com.juked.app.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.juked.app.permission.C2D_MESSAGE"/>
+    <!-- /1-->
+
+    <!-- 2 Add permissions -->
+    <!-- App receives GCM messages. -->
+<!--    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>-->
+<!--    &lt;!&ndash; GCM requires a Google account. &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>-->
+<!--    &lt;!&ndash; Keeps the processor from sleeping when a message is received. &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK"/>-->
+    <!-- GCM connects to Google Services. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".JukedApplication">
+
+        <uses-library android:name ="org.apache.http.legacy" android:required ="false"/>
+
+        <activity
+            android:name="com.audiosdktest.app.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.audiosdktest.app.SetPreferenceActivity"
+            android:label="@string/title_activity_main"
+
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:label="Juked"
+            android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+<!--        <activity android:name="com.facebook.LoginActivity"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar"-->
+<!--            android:label="@string/app_name" />-->
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="487874921267044" />
+
+<!--        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver"-->
+<!--            android:permission="com.google.android.c2dm.permission.SEND">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>-->
+<!--                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>-->
+<!--                <category android:name="com.juked.app"/>-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+        <!-- /3 -->
+
+        <!-- 4 -->
+<!--        <service android:name=".GCMIntentService" />-->
+    </application>
+
+</manifest>
